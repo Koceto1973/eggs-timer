@@ -8,23 +8,43 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var appName: UILabel!
+    @IBOutlet weak var appName: uiLabel!
     
+    @IBOutlet weak var inputSeconds: uiTextField!
+    
+    @IBOutlet weak var playButton: UIBarButtonItem!
+    @IBAction func playAction(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var stopButton: UIBarButtonItem!
+    @IBAction func stopAction(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var rewindButton: UIBarButtonItem!
+    @IBAction func rewindAction(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var pauseButton: UIBarButtonItem!
+    @IBAction func pauseAction(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var fastForwardButton: UIBarButtonItem!
+    @IBAction func fastForwardAction(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        appName.layer.cornerRadius = 10
-        appName.textColor = UIColor.red
-        appName.text = "Happy Birthday to You!"
-        appName.font = UIFont.italicSystemFont(ofSize: 15)
-        appName.clipsToBounds = true
-        appName.layer.cornerRadius = 10  // set clip to bounds for all IOS versions
         
-    }
-
+       inputSeconds.delegate = self
+               
+        
+   }
     
-
+    // input keyboard dismisal
+    override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
