@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina3_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eggs_timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Countdown Clock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-rO-cab" customClass="uiLabel" customModule="eggs_timer" customModuleProvider="target">
-                                <rect key="frame" x="97" y="50" width="220" height="35"/>
+                                <rect key="frame" x="130" y="30" width="220" height="35"/>
                                 <color key="backgroundColor" red="0.74509803921568629" green="0.92156862745098034" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="nQr-Te-dym"/>
@@ -29,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN9-PQ-zN5">
-                                <rect key="frame" x="20" y="672" width="374" height="44"/>
+                                <rect key="frame" x="20" y="268" width="440" height="32"/>
                                 <color key="backgroundColor" red="0.62745098039215685" green="0.92156862745098034" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem systemItem="play" id="Srh-Ml-xTF">
@@ -70,11 +71,21 @@
                                 <color key="barTintColor" red="0.74509803919999995" green="0.92156862750000001" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the seconds to count down" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="KJy-Hm-jTe" customClass="uiTextField" customModule="eggs_timer" customModuleProvider="target">
-                                <rect key="frame" x="20" y="353" width="374" height="30"/>
+                                <rect key="frame" x="20" y="145" width="440" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="360" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sn-mA-Wkm" customClass="uiLabel" customModule="eggs_timer" customModuleProvider="target">
+                                <rect key="frame" x="202.5" y="180" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="GgB-TR-YMV"/>
+                                    <constraint firstAttribute="width" secondItem="2sn-mA-Wkm" secondAttribute="height" multiplier="1:1" id="qO5-eU-Yzl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -82,16 +93,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XN9-PQ-zN5" secondAttribute="bottom" constant="20" id="4XA-U3-RC8"/>
                             <constraint firstItem="XN9-PQ-zN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7fO-0k-vKw"/>
                             <constraint firstItem="XN9-PQ-zN5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="MOs-Iw-KLc"/>
+                            <constraint firstItem="2sn-mA-Wkm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RFV-si-VAI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KJy-Hm-jTe" secondAttribute="trailing" constant="20" id="ZWB-aL-jGz"/>
                             <constraint firstItem="KJy-Hm-jTe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aX1-KR-GrX"/>
                             <constraint firstItem="KJy-Hm-jTe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rDV-NB-b1H"/>
                             <constraint firstItem="kkn-rO-cab" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="wpv-xA-k8u"/>
+                            <constraint firstItem="2sn-mA-Wkm" firstAttribute="top" secondItem="KJy-Hm-jTe" secondAttribute="bottom" constant="5" id="yrA-C9-n7w"/>
                             <constraint firstItem="KJy-Hm-jTe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzA-yK-77h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="appName" destination="kkn-rO-cab" id="75P-4F-cTg"/>
+                        <outlet property="counterLabel" destination="2sn-mA-Wkm" id="cZ4-dj-QIZ"/>
                         <outlet property="fastForwardButton" destination="Q81-3W-EGk" id="xwh-lu-D2K"/>
                         <outlet property="inputSeconds" destination="KJy-Hm-jTe" id="VCg-kl-GyE"/>
                         <outlet property="pauseButton" destination="l0u-HZ-X7p" id="00e-nH-HLi"/>
@@ -102,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-99.375" y="117.5"/>
+            <point key="canvasLocation" x="-100" y="116.25"/>
         </scene>
     </scenes>
 </document>

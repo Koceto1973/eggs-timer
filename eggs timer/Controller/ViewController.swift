@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var appName: uiLabel!
-    
+    @IBOutlet weak var counterLabel: uiLabel!
     @IBOutlet weak var inputSeconds: uiTextField!
     
     @IBOutlet weak var playButton: UIBarButtonItem!
@@ -38,7 +38,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
        inputSeconds.delegate = self
-               
+       counterLabel.isHidden = true
+        
+       
+        
         
    }
     
