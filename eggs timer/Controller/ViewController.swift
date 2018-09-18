@@ -49,7 +49,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var rewindButton: UIBarButtonItem!
     @IBAction func rewindAction(_ sender: Any) {
-        if isTicking {
+        if isTicking && !isInterrupted {
             if timeToCount > 10 {
                     timeToCount -= 10
             }
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var fastForwardButton: UIBarButtonItem!
     @IBAction func fastForwardAction(_ sender: Any) {
-        if isTicking {
+        if isTicking && !isInterrupted {
             timeToCount += 10
         }
     }
@@ -103,6 +103,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if timeToCount >= 0 {
                 if timeToCount < 60 {
                     counterLabel.textColor = UIColor.red
+                }
+                else {
+                    counterLabel.textColor = UIColor.black
                 }
                 counterLabel.text = String(timeToCount)
                 print(timeToCount)
