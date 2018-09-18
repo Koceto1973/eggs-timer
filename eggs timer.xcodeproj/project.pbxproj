@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35817417214DBA5500627FAC /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35817416214DBA5500627FAC /* timer.swift */; };
 		358BF659214DAB5200574387 /* uiTextFied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BF658214DAB5200574387 /* uiTextFied.swift */; };
 		35C69391214D15FC005B1E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C69390214D15FC005B1E38 /* AppDelegate.swift */; };
 		35C69393214D15FC005B1E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C69392214D15FC005B1E38 /* ViewController.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		35817416214DBA5500627FAC /* timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timer.swift; sourceTree = "<group>"; };
 		358BF658214DAB5200574387 /* uiTextFied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uiTextFied.swift; sourceTree = "<group>"; };
 		35C6938D214D15FC005B1E38 /* eggs timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggs timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C69390214D15FC005B1E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 		35C693A5214D65DA005B1E38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				35817416214DBA5500627FAC /* timer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,7 +175,6 @@
 			files = (
 				35C693A8214D6632005B1E38 /* uiLabel.swift in Sources */,
 				35C69393214D15FC005B1E38 /* ViewController.swift in Sources */,
-				35817417214DBA5500627FAC /* timer.swift in Sources */,
 				358BF659214DAB5200574387 /* uiTextFied.swift in Sources */,
 				35C69391214D15FC005B1E38 /* AppDelegate.swift in Sources */,
 			);
